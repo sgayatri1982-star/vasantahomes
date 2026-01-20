@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Heart, Leaf, Shield, Mountain, Users, Award } from 'lucide-react';
+import { Heart, Shield, Users, Award } from 'lucide-react';
 
 const About = () => {
   const fadeInUp = {
@@ -10,22 +10,22 @@ const About = () => {
 
   const values = [
     {
-      icon: Heart,
+      icon: "icons/heart.png",
       title: "Inspired by Nature",
       description: "Every property reflects the natural beauty and serenity of the Himalayas"
     },
     {
-      icon: Leaf,
+      icon: "icons/leaves.png",
       title: "Designed for Life",
       description: "Thoughtful spaces that enhance your connection with nature and yourself"
     },
     {
-      icon: Shield,
+      icon: "icons/shield.png", 
       title: "Trust & Transparency",
       description: "Global standards of professionalism with complete transparency"
     },
     {
-      icon: Mountain,
+      icon: "icons/mountain.png",
       title: "Curated Excellence",
       description: "Only the finest properties that meet our standards of luxury and value"
     }
@@ -64,11 +64,19 @@ const About = () => {
               </p>
               <div className="flex items-center space-x-6">
                 <div className="flex items-center space-x-2">
-                  <Mountain className="h-6 w-6 text-vasanta-600" />
+                  <img
+                    src="/icons/mountain.png"
+                    alt="Vasanta Homes Logo"
+                    className={`h-8 w-8 transition-all duration-300 opacity-90 group-hover:scale-105`}
+                  />
                   <span className="font-medium text-gray-900">Himalayan Properties</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Shield className="h-6 w-6 text-vasanta-600" />
+                  <img
+                    src="/icons/shield.png"
+                    alt="Vasanta Homes Logo"
+                    className={`h-6 w-6 transition-all duration-300 opacity-90 group-hover:scale-105`}
+                  />
                   <span className="font-medium text-gray-900">100% Legal</span>
                 </div>
               </div>
@@ -224,9 +232,19 @@ const About = () => {
                 className="text-center group"
               >
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-2">
-                  <value.icon className="h-12 w-12 text-vasanta-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-600">{value.description}</p>
+                  
+                  <img
+                    src={value.icon}
+                    alt={value.title}
+                    className="h-12 w-12 mx-auto mb-4"
+                  />
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {value.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {value.description}
+                  </p>
                 </div>
               </motion.div>
             ))}

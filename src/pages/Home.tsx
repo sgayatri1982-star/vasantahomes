@@ -175,15 +175,11 @@ const Home = () => {
               >
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
                   
-                  {typeof factor.icon === "string" ? (
-                    <img
-                      src={factor.icon}
-                      alt={factor.title}
-                      className="h-12 w-12 mx-auto mb-4"
-                    />
-                  ) : (
-                    <factor.icon className="h-12 w-12 mx-auto mb-4 text-vasanta-600" aria-label={factor.title} />
-                  )}
+                  <img
+                    src={factor.icon}
+                    alt={factor.title}
+                    className="h-12 w-12 mx-auto mb-4"
+                  />
 
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">
                     {factor.title}
