@@ -52,13 +52,20 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <Mountain className={`h-8 w-8 transition-colors duration-300 ${
-              isScrolled ? 'text-emerald-600' : 'text-white'
-            } group-hover:text-emerald-500`} />
-            <span className={`text-2xl font-serif font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>
-              Vasanta Homes
+            <img
+              src="/logo.png"
+              alt="Vasanta Homes Logo"
+              className={`h-10 w-12 transition-all duration-300 ${
+                isScrolled ? 'opacity-100' : 'opacity-90'
+              } group-hover:scale-105`}
+            />
+
+            <span
+              className={`text-2xl font-serif font-bold transition-colors duration-300 ${
+                isScrolled ? 'text-gray-900' : 'text-white'
+              }`}
+            >
+              VasantaHomes
             </span>
           </Link>
 

@@ -69,17 +69,17 @@ const Home = () => {
 
   const trustFactors = [
     {
-      icon: Shield,
+      icon: "icons/shield.png",
       title: "100% Legal & Freehold",
       description: "Clear titles and transparent processes"
     },
     {
-      icon: Award,
+      icon: "icons/medal.png",
       title: "Curated Excellence",
       description: "Thoughtfully selected premium properties"
     },
     {
-      icon: Users,
+      icon: "icons/trust.png",
       title: "Trusted Legacy",
       description: "Serving discerning clients across India"
     }
@@ -163,7 +163,7 @@ const Home = () => {
       {/* Trust Section */}
       <section className="py-20 bg-stone-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
+          <motion.div
             variants={staggerContainer}
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
           >
@@ -174,15 +174,30 @@ const Home = () => {
                 className="text-center group"
               >
                 <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                  <factor.icon className="h-12 w-12 text-emerald-600 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{factor.title}</h3>
-                  <p className="text-gray-600">{factor.description}</p>
+                  
+                  {typeof factor.icon === "string" ? (
+                    <img
+                      src={factor.icon}
+                      alt={factor.title}
+                      className="h-12 w-12 mx-auto mb-4"
+                    />
+                  ) : (
+                    <factor.icon className="h-12 w-12 mx-auto mb-4 text-vasanta-600" aria-label={factor.title} />
+                  )}
+
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                    {factor.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {factor.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </motion.div>
         </div>
       </section>
+
 
       {/* Property Types Section */}
       <section className="py-20 bg-white">

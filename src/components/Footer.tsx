@@ -9,9 +9,13 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Mountain className="h-8 w-8 text-emerald-600" />
+              <img
+                src="/logoF.png"
+                alt="Vasanta Homes Logo"
+                className="h-8 w-10 transition-all duration-300 opacity-90 group-hover:scale-105"
+              />
               <span className="text-2xl font-serif font-bold text-gray-900">
-                Vasanta Homes
+                VasantaHomes
               </span>
             </div>
             <p className="text-gray-600 leading-relaxed">
@@ -82,7 +86,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-stone-200">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-gray-600 text-sm">
-              © 2024 Vasanta Homes. All rights reserved. Luxury Rooted in Nature.
+              © 2024 VasantaHomes. All rights reserved. Luxury Rooted in Nature.
             </p>
             <div className="flex space-x-6 text-sm text-gray-600">
               <a href="#" className="hover:text-emerald-600 transition-colors">Privacy Policy</a>
